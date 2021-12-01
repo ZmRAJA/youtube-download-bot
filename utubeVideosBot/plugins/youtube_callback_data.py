@@ -74,7 +74,7 @@ async def catch_youtube_dldata(c, q):
     if not os.path.isdir(userdir):
         os.makedirs(userdir)
     await q.edit_message_reply_markup(
-        InlineKeyboardMarkup([[InlineKeyboardButton("📥 Downloading...", callback_data="down")]]))
+        InlineKeyboardMarkup([[InlineKeyboardButton("📥📥 Downloading...📥📥", callback_data="down")]]))
     filepath = os.path.join(userdir, filext)
     # await q.edit_message_reply_markup([[InlineKeyboardButton("Processing..")]])
 
@@ -107,7 +107,7 @@ async def catch_youtube_dldata(c, q):
             media=filename,
             thumb=thumb_image_path,
             caption=os.path.basename(filename),
-            title=os.path.basename(filename) + f"\n\n© @TG_Utubebot"
+            title=os.path.basename(filename) + f"\n\n© ⚡️⚡️ @utubeVideosBot ⚡️⚡️",
         )
 
     if cb_data.startswith("video"):
@@ -119,7 +119,7 @@ async def catch_youtube_dldata(c, q):
             width=width,
             height=height,
             thumb=thumb_image_path,
-            caption=os.path.basename(filename) + f"\n\n© @TG_Utubebot",
+            caption=os.path.basename(filename) + f"\n\n© ⚡️⚡️ @utubeVideosBot ⚡️⚡️ ",
             supports_streaming=True
         )
 
@@ -128,7 +128,7 @@ async def catch_youtube_dldata(c, q):
         med = InputMediaDocument(
             media=filename,
             thumb=thumb_image_path,
-            caption=os.path.basename(filename) + f"\n\n© @TG_Utubebot",
+            caption=os.path.basename(filename) + f"\n\n© ⚡️⚡️ @utubeVideosBot ⚡️⚡️  ",
         )
 
     if cb_data.startswith("docvideo"):
@@ -137,7 +137,7 @@ async def catch_youtube_dldata(c, q):
         med = InputMediaDocument(
             media=filename,
             thumb=thumb_image_path,
-            caption=os.path.basename(filename) + f"\n\n© @TG_Utubebot",
+            caption=os.path.basename(filename) + f"\n\n© ⚡️⚡️ @utubeVideosBot ⚡️⚡️ ",
         )
     if med:
         loop.create_task(send_file(c, q, med, filename))
@@ -149,7 +149,7 @@ async def send_file(c, q, med, filename):
     print(med)
     try:
         await q.edit_message_reply_markup(
-            InlineKeyboardMarkup([[InlineKeyboardButton("📤 Uploading to TG...", callback_data="down")]]))
+            InlineKeyboardMarkup([[InlineKeyboardButton("📤📤 Uploading to TG...📤📤", callback_data="down")]]))
         await c.send_chat_action(chat_id=q.message.chat.id, action="upload_document")
         # this one is not working
         await q.edit_message_media(media=med)
