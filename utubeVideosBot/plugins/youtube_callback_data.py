@@ -9,8 +9,8 @@ from pyrogram import (Client,
                       InputMediaVideo,
                       InputMediaAudio)
 
-from MyTestBotZ.helper.ffmfunc import duration
-from MyTestBotZ.helper.ytdlfunc import downloadvideocli, downloadaudiocli
+from utubeVideosBot.helper.ffmfunc import duration
+from utubeVideosBot.helper.ytdlfunc import downloadvideocli, downloadaudiocli
 from PIL import Image
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
