@@ -1,4 +1,4 @@
-# Youtube Downloader bot
+# Utube Downloader bot
 #### [YouTube download bot](https://github.com/ZmRAJA/UTubebot.git)
 
 #
