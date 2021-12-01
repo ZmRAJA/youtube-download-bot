@@ -7,11 +7,11 @@ APP_ID = config.APP_ID
 API_HASH = config.API_HASH
 
 plugins = dict(
-    root="MyTestBotZ/plugins",
+    root="utubeVideosBot/plugins",
 )
 
 Client(
-    "YouTubeDLBot",
+    "utubeVideosBot",
     bot_token=BOT_TOKEN,
     api_id=APP_ID,
     api_hash=API_HASH,
