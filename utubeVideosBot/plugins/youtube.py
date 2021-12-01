@@ -1,13 +1,13 @@
 from datetime import datetime, timedelta
 from pyrogram import Client, Filters, InlineKeyboardMarkup, InlineKeyboardButton
-from MyTestBotZ import user_time
+from utubeVideosBot import user_time
 from config import youtube_next_fetch
-from MyTestBotZ.helper.ytdlfunc import extractYt, create_buttons
+from utubeVideosBot.helper.ytdlfunc import extractYt, create_buttons
 import wget
 import os
 from PIL import Image
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel
-AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "1248974748 1401477467").split())
+AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "1960040199").split())
 
     
 ytregex = r"^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$"
